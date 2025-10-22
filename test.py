@@ -74,7 +74,7 @@ def test(dataset_name):
     while i < len_dataloader:
 
         # test model using target data
-        data_target = data_target_iter.next()
+        data_target = next(data_target_iter)
         t_img, t_label = data_target
 
         batch_size = len(t_label)
